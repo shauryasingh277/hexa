@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Modern, responsive e-commerce template built with Tailwind CSS. Clean design, fast loading, SEO friendly.">
+  <title>Hexa Shop — Modern E‑commerce Template</title>
+  <!-- Tailwind via CDN (good for prototyping). Replace with compiled Tailwind for production. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"Hexa Shop","url":"/","potentialAction":{"@type":"SearchAction","target":"/?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-6">
+          <a href="/" class="text-2xl font-bold text-indigo-600">Hexa<span class="text-gray-600">Shop</span></a>
+          <ul class="hidden md:flex items-center gap-4 text-sm">
+            <li><a href="/" class="hover:text-indigo-600">Home</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Men</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Women</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Kids</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <input id="search" type="search" placeholder="Search products..." class="hidden sm:inline-block w-64 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300">
+            <div id="suggestions" class="absolute left-0 mt-1 w-full bg-white border rounded-md shadow-sm hidden"></div>
+          </div>
+          <a href="/cart.html" class="flex items-center gap-2 border px-3 py-2 rounded-md hover:bg-gray-100">🛒 <span id="cart-count" class="text-sm">0</span></a>
+          <a href="/account.html" class="px-3 py-2 rounded-md border hover:bg-gray-100">Account</a>
+
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">☰</button>
+        </div>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-white border-t hidden">
+      <div class="px-4 py-2 space-y-2">
+        <a href="#" class="block">Home</a>
+        <a href="#" class="block">Men</a>
+        <a href="#" class="block">Women</a>
+        <a href="#" class="block">Kids</a>
+        <a href="#" class="block">Accessories</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Hero Banner (editable via assets/js/main.js - BANNER object) -->
+    <section class="rounded-lg overflow-hidden bg-gradient-to-r from-indigo-600 to-indigo-400 text-white mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+        <div class="p-8">
+          <h1 id="hero-title" class="text-3xl sm:text-4xl font-extrabold">Your seasonal picks — up to 40% off</h1>
+          <p id="hero-subtitle" class="mt-3 text-lg opacity-90">Shop top-quality styles curated for comfort and confidence. Limited time only.</p>
+          <div class="mt-6">
+            <a id="hero-cta" href="#" class="inline-block bg-white text-indigo-600 font-semibold px-5 py-3 rounded-md shadow">Shop Now</a>
+          </div>
+        </div>
+        <div class="p-4">
+          <img id="hero-image" src="https://images.unsplash.com/photo-1520975698510-4d7f8a2a5f15?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Promotion" class="w-full h-64 object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section>
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-semibold">Featured Products</h2>
+        <div class="text-sm text-gray-600">Showing <span id="product-count">0</span> items</div>
+      </div>
+
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product cards injected here -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-600">
+      <div class="flex flex-col md:flex-row md:justify-between gap-4">
+        <div>© <span id="year"></span> Hexa Shop. All rights reserved.</div>
+        <div class="space-x-4">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/products.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
